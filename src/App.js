@@ -18,12 +18,15 @@ function Token(props) {
   const [token, setToken] = useLocalStorage(figmaTokenKey, null)
   const handleChange = (e) => setToken(e.target.value)
   return (
-    <input
-      type="text"
-      value={token}
-      onChange={handleChange}
-      style={{ width: 320 }}
-    />
+    <div>
+      <p>Token</p>
+      <input
+        type="text"
+        value={token}
+        onChange={handleChange}
+        style={{ width: 320 }}
+      />
+    </div>
   )
 }
 
@@ -34,6 +37,7 @@ function Files(props) {
   return (
     <>
       <div>
+        <p>File</p>
         <input
           type="text"
           value={value}
